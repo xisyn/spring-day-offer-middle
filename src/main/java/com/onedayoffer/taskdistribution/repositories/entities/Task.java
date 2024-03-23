@@ -3,10 +3,17 @@ package com.onedayoffer.taskdistribution.repositories.entities;
 import com.onedayoffer.taskdistribution.DTO.TaskStatus;
 import com.onedayoffer.taskdistribution.DTO.TaskType;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "task")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Task {
     @Id
     @GeneratedValue(strategy = IDENTITY)
